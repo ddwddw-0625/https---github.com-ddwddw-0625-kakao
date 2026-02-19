@@ -1,29 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Open Graph 메타태그 -->
-<meta property="og:title" content="베드락 RPG 찾으시는 분?">
-<meta property="og:description" content="24시간 안정적인 렐름으로 즐길 수 있는 RPG가 있습니다.
-운영진이 친절해요!
-들어와서 소통만 하셔도 되니 부담없이 들어와주세요.">
-<meta property="og:url" content="https://open.kakao.com/o/pE7CFV5h">
-<meta property="og:image" content="https://colourful-bronze-do5d9m1vpj.edgeone.app/%EA%B8%80%EB%A1%9C%EC%9A%B0.png">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Aphron RPG">
-<meta property="og:locale" content="ko_KR">
+    <title>내 카톡 공유 페이지</title>
 
-<!-- Twitter Card 메타태그 -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="베드락 RPG 찾으시는 분?">
-<meta name="twitter:description" content="24시간 안정적인 렐름으로 즐길 수 있는 RPG가 있습니다.
-운영진이 친절해요!
-들어와서 소통만 하셔도 되니 부담없이 들어와주세요.">
-<meta name="twitter:image" content="https://colourful-bronze-do5d9m1vpj.edgeone.app/%EA%B8%80%EB%A1%9C%EC%9A%B0.png">
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js" integrity="sha384-S997EqY7GAlpAtvS82X9O0X1o0Y0A==" crossorigin="anonymous"></script>
+    
+    <script>
+        // 2. SDK 초기화 (플랫폼 키에서 복사한 JavaScript 키를 넣으세요)
+        Kakao.init('4104ffcf783dc1d9b1c9ffdf0bafdbb6');
+        console.log('초기화 여부:', Kakao.isInitialized());
+    </script>
 </head>
 <body>
-    
+
+    <h1>카카오톡 공유하기 테스트</h1>
+
+    <a id="kakaotalk-sharing-btn" href="javascript:;">
+        <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
+             alt="카카오톡 공유 보내기 버튼" style="width: 60px;">
+    </a>
+
+    <script>
+      Kakao.Share.createDefaultButton({
+        container: '#kakaotalk-sharing-btn',
+        objectType: 'feed',
+        content: {
+          title: 'AphronRPG',
+          description: '베드락 렐름 RPG',
+          imageUrl: 'https://ifh.cc/v-1W1d4F', // 미리보기 이미지 주소
+          link: {
+            // [플랫폼 키] 설정에서 등록한 도메인과 일치해야 함
+            mobileWebUrl: 'https://open.kakao.com/o/pE7CFV5h',
+            webUrl: 'https://open.kakao.com/o/pE7CFV5h',
+          },
+        },
+        buttons: [
+          {
+            title: '참여하기',
+            link: {
+              mobileWebUrl: 'https://open.kakao.com/o/pE7CFV5h',
+              webUrl: 'https://open.kakao.com/o/pE7CFV5h',
+            },
+          },
+        ],
+      });
+    </script>
+
 </body>
 </html>
