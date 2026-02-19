@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>카카오톡 공유하기</title>
+    <title>연결 페이지</title>
 
     <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js" crossorigin="anonymous"></script>
     
     <script>
-        // 2. 본인의 JavaScript 키를 입력하세요
+        // 2. 본인의 JavaScript 키 입력
         Kakao.init('4104ffcf783dc1d9b1c9ffdf0bafdbb6'); 
     </script>
 
@@ -19,10 +19,10 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f5f5f5;
+            background-color: #ffffff;
         }
         #kakaotalk-sharing-btn img {
-            width: 80px;
+            width: 70px;
             cursor: pointer;
         }
     </style>
@@ -36,19 +36,20 @@
     <script>
       Kakao.Share.createDefaultButton({
         container: '#kakaotalk-sharing-btn',
-        objectType: 'feed', // 이 부분이 '피드' 형식을 결정합니다!
+        objectType: 'feed', 
         content: {
           title: '오픈채팅방 초대 💬', 
-          description: '클릭 시 오픈채팅으로 바로 이동합니다.', 
-          imageUrl: 'https://ifh.cc/v-1W1d4F', // 카드에 보일 큰 이미지
+          description: '클릭하면 바로 채팅방으로 연결됩니다.', 
+          imageUrl: 'https://imgur.com/a/yN6RkVA#xNTpqSz', // 여기에 꼭 직접 링크(.jpg 등)를 넣으세요!
           link: {
+            // 여기 주소들이 도메인 설정의 open.kakao.com과 매칭되어 바로 이동하게 합니다.
             mobileWebUrl: 'https://open.kakao.com/o/pE7CFV5h', 
             webUrl: 'https://open.kakao.com/o/pE7CFV5h',
           },
         },
         buttons: [
           {
-            title: '채팅방 입장하기', // 카드 하단 버튼 글자
+            title: '채팅방 바로가기',
             link: {
               mobileWebUrl: 'https://open.kakao.com/o/pE7CFV5h',
               webUrl: 'https://open.kakao.com/o/pE7CFV5h',
