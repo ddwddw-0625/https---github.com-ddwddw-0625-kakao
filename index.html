@@ -3,15 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오톡 공유하기</title>
+
     <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js" crossorigin="anonymous"></script>
+    
     <script>
-        // 1. 본인의 JavaScript 키 입력
         Kakao.init('4104ffcf783dc1d9b1c9ffdf0bafdbb6'); 
     </script>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #kakaotalk-sharing-btn img {
+            width: 70px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        #kakaotalk-sharing-btn:hover img {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
+
     <a id="kakaotalk-sharing-btn" href="javascript:;">
-        <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png" style="width: 70px;">
+        <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png" alt="카톡 공유 버튼">
     </a>
 
     <script>
@@ -19,10 +41,9 @@
         container: '#kakaotalk-sharing-btn',
         objectType: 'feed',
         content: {
-          title: '오픈채팅 초대장 💬',
-          description: '클릭 시 오픈채팅방으로 즉시 연결됩니다.',
-          // 2. 따온 이미지 직접 링크 적용
-          imageUrl: 'https://i.imgur.com/xNTpqSz.png', 
+          title: '오픈채팅방 초대 💬',
+          description: '클릭하면 오픈채팅방으로 즉시 연결됩니다.',
+          imageUrl: 'https://i.imgur.com/xNTpqSz.png',
           link: {
             mobileWebUrl: 'https://open.kakao.com/o/pE7CFV5h',
             webUrl: 'https://open.kakao.com/o/pE7CFV5h',
@@ -30,7 +51,7 @@
         },
         buttons: [
           {
-            title: '지금 입장하기',
+            title: '채팅방 입장하기',
             link: {
               mobileWebUrl: 'https://open.kakao.com/o/pE7CFV5h',
               webUrl: 'https://open.kakao.com/o/pE7CFV5h',
@@ -39,5 +60,6 @@
         ],
       });
     </script>
+
 </body>
 </html>
